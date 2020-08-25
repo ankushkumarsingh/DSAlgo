@@ -10,6 +10,8 @@
 		B91A4F2E24EFD81C003E5E73 /* DSAlgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91A4F2424EFD81C003E5E73 /* DSAlgo.framework */; };
 		B91A4F3324EFD81C003E5E73 /* DSAlgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A4F3224EFD81C003E5E73 /* DSAlgoTests.swift */; };
 		B91A4F3524EFD81C003E5E73 /* DSAlgo.h in Headers */ = {isa = PBXBuildFile; fileRef = B91A4F2724EFD81C003E5E73 /* DSAlgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B91A4F3F24EFD888003E5E73 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A4F3E24EFD888003E5E73 /* LinkedList.swift */; };
+		B91A4F4124EFDD41003E5E73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A4F4024EFDD41003E5E73 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B91A4F2D24EFD81C003E5E73 /* DSAlgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSAlgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91A4F3224EFD81C003E5E73 /* DSAlgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAlgoTests.swift; sourceTree = "<group>"; };
 		B91A4F3424EFD81C003E5E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91A4F3E24EFD888003E5E73 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		B91A4F4024EFDD41003E5E73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				B91A4F2724EFD81C003E5E73 /* DSAlgo.h */,
 				B91A4F2824EFD81C003E5E73 /* Info.plist */,
+				B91A4F3E24EFD888003E5E73 /* LinkedList.swift */,
+				B91A4F4024EFDD41003E5E73 /* User.swift */,
 			);
 			path = DSAlgo;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					B91A4F2324EFD81C003E5E73 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					B91A4F2C24EFD81C003E5E73 = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91A4F4124EFDD41003E5E73 /* User.swift in Sources */,
+				B91A4F3F24EFD888003E5E73 /* LinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		B91A4F3924EFD81C003E5E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 28W8SU299G;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ankushkumarsingh.DSAlgo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		B91A4F3A24EFD81C003E5E73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 28W8SU299G;
@@ -388,6 +400,7 @@
 		B91A4F3C24EFD81C003E5E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28W8SU299G;
 				INFOPLIST_FILE = DSAlgoTests/Info.plist;
@@ -406,6 +419,7 @@
 		B91A4F3D24EFD81C003E5E73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28W8SU299G;
 				INFOPLIST_FILE = DSAlgoTests/Info.plist;
