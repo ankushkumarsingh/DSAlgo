@@ -33,13 +33,23 @@ class DSAlgoTests: XCTestCase {
   }
 
   func testLinkedList() throws {
-    let n1 = Node(value: 3, next: Node(value: 3, next: Node(value: 2, next: Node(value: 1))))
-    let n2 = n1.next
-    let n3 = n2?.next
-    print(n1.value)
-    print(n2?.value)
-    print(n3?.value)
-    XCTAssert(n1 == n2)
+    let linkedList = LinkedList<Int>()
+    linkedList.append(element: 2)
+    linkedList.prepend(element: 0)
+    linkedList.insert(newElement: 1, at : 1)
+    linkedList.append(element: 3)
+    linkedList.append(element: 5)
+    linkedList.append(element: 6)
+    linkedList.insert(newElement: 4, at: 4)
+    linkedList.printValues()
+
+    linkedList.reverse()
+    linkedList.printValues()
+  }
+
+  func testArray() throws {
+    var array = Array<Int>()
+//    array.insert(<#T##newElement: Int##Int#>, at: <#T##Int#>)
   }
 
   func testStringIfUnique() {

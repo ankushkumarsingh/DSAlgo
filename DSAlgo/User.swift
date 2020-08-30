@@ -11,7 +11,7 @@ struct User {
   var name: String
   var gender: String
   var score = 0
-  var items = [String]()
+  var items = Array<String>()
 }
 
 extension User {
