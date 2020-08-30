@@ -47,9 +47,27 @@ class DSAlgoTests: XCTestCase {
     linkedList.printValues()
   }
 
-  func testArray() throws {
-    var array = Array<Int>()
-//    array.insert(<#T##newElement: Int##Int#>, at: <#T##Int#>)
+  func testStack() throws {
+    let stack = StackLinkedList<Int>()
+     stack.push(newElement: 1)
+     stack.push(newElement: 3)
+     stack.push(newElement: 5)
+     stack.push(newElement: 6)
+     stack.printValues()
+    print(stack.pop())
+    stack.printValues()
+
+   }
+
+
+  func testQueue() throws {
+    let queue = QueueLinkedList<Int>()
+    queue.enqueue(newElement: 1)
+    queue.enqueue(newElement: 2)
+    queue.enqueue(newElement: 3)
+    queue.printValues()
+    print(queue.dequeue())
+    queue.printValues()
   }
 
   func testStringIfUnique() {

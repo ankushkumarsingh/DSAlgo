@@ -13,6 +13,8 @@
 		B91A4F3F24EFD888003E5E73 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A4F3E24EFD888003E5E73 /* LinkedList.swift */; };
 		B91A4F4124EFDD41003E5E73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A4F4024EFDD41003E5E73 /* User.swift */; };
 		B96220D124FB76D200B6570B /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96220D024FB76D200B6570B /* Stack.swift */; };
+		B96220D524FB900C00B6570B /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96220D424FB900C00B6570B /* Queue.swift */; };
+		B96220D724FBBFAD00B6570B /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96220D624FBBFAD00B6570B /* Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		B91A4F3E24EFD888003E5E73 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		B91A4F4024EFDD41003E5E73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B96220D024FB76D200B6570B /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		B96220D424FB900C00B6570B /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		B96220D624FBBFAD00B6570B /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				B91A4F3E24EFD888003E5E73 /* LinkedList.swift */,
 				B91A4F4024EFDD41003E5E73 /* User.swift */,
 				B96220D024FB76D200B6570B /* Stack.swift */,
+				B96220D424FB900C00B6570B /* Queue.swift */,
+				B96220D624FBBFAD00B6570B /* Tree.swift */,
 			);
 			path = DSAlgo;
 			sourceTree = "<group>";
@@ -205,9 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96220D724FBBFAD00B6570B /* Tree.swift in Sources */,
 				B91A4F4124EFDD41003E5E73 /* User.swift in Sources */,
 				B96220D124FB76D200B6570B /* Stack.swift in Sources */,
 				B91A4F3F24EFD888003E5E73 /* LinkedList.swift in Sources */,
+				B96220D524FB900C00B6570B /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

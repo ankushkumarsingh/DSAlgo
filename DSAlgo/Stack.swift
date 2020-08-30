@@ -48,26 +48,49 @@ class StackLinkedList<T> where T: Equatable {
     count = 0
   }
 
+  private func traverseLinkedList(to : Int) -> Node<T>? {
+    var temp = bottom
+    for _ in 0..<(to-1) {
+      temp = temp?.next
+    }
+    return temp
+  }
+
 }
 
 extension StackLinkedList: Stack {
 
   func push(newElement: T) {
     let node = Node(value: newElement)
-    top?.next = node
+    if count == 0 {
+      top = node
+      bottom = node
+      count = 1
+      return
+    }
+    node.next = top
     top = node
     count += 1
   }
 
+
   func pop() -> T? {
-    let node = top
+    let poppedElement = top
+    top = top?.next
     count -= 1
-    return top?.value
+    return poppedElement?.value
   }
 
   func peek() -> T? {
     top?.value
   }
 
-
+  func printValues() {
+    var temp = top
+    while temp != nil {
+      print(temp!.value, terminator: " -> ")
+      temp = temp?.next
+    }
+    print("\n")
+  }
 }
