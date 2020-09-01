@@ -7,6 +7,22 @@
 //
 
 import Foundation
+
+fileprivate class Node<T> where T: Equatable {
+  var next: Node?
+  var value:T
+  init(value: T, next: Node? = nil) {
+    self.next = next
+    self.value = value
+  }
+}
+
+extension Node: Equatable {
+  static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
+    return lhs.value == rhs.value
+  }
+
+}
 protocol Stack {
   associatedtype T
   mutating func push(newElement: T)
@@ -38,8 +54,8 @@ extension StackArray: Stack {
 }
 
 class StackLinkedList<T> where T: Equatable {
-  var top: Node<T>?
-  var bottom: Node<T>?
+  private var top: Node<T>?
+  private var bottom: Node<T>?
   var count: Int
 
   init() {

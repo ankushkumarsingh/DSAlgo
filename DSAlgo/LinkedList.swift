@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Node<T> {
+fileprivate class Node<T> where T: Equatable {
   var next: Node?
   var value:T
   init(value: T, next: Node? = nil) {
@@ -16,7 +16,12 @@ class Node<T> {
     self.value = value
   }
 }
+extension Node: Equatable {
+  static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
+    return lhs.value == rhs.value
+  }
 
+}
 protocol LinkedListProtocol {
   associatedtype T
   var isEmpty: Bool {get}

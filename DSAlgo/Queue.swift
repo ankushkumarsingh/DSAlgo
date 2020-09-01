@@ -7,6 +7,22 @@
 //
 
 import Foundation
+
+fileprivate class Node<T> where T: Equatable {
+  var next: Node?
+  var value:T
+  init(value: T, next: Node? = nil) {
+    self.next = next
+    self.value = value
+  }
+}
+
+extension Node: Equatable {
+  static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
+    return lhs.value == rhs.value
+  }
+
+}
 protocol Queue {
   associatedtype T
   func enqueue(newElement: T)
@@ -15,8 +31,8 @@ protocol Queue {
 }
 
 class QueueLinkedList<T> where T: Equatable {
-  var top: Node<T>?
-  var bottom: Node<T>?
+  private var top: Node<T>?
+  private var bottom: Node<T>?
   var count:Int
   init() {
     top = nil
@@ -36,11 +52,13 @@ extension QueueLinkedList: Queue {
     }
     bottom?.next = node
     bottom = node
+    count += 1
   }
 
   func dequeue() -> T? {
     let dequeuedElement = top
     top = top?.next
+    count -= 1
     return dequeuedElement?.value
   }
 

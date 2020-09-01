@@ -70,6 +70,24 @@ class DSAlgoTests: XCTestCase {
     queue.printValues()
   }
 
+  func testBST() throws {
+    let bst = BSTree<Int>()
+    bst.insert(newElement: 5)
+    bst.insert(newElement: 3)
+    bst.insert(newElement: 8)
+    bst.insert(newElement: 4)
+    bst.insert(newElement: 7)
+    bst.insert(newElement: 6)
+    bst.insert(newElement: 1)
+    bst.insert(newElement: 0)
+    bst.insert(newElement: 2)
+    bst.insert(newElement: 10)
+    bst.insert(newElement: 15)
+    bst.insert(newElement: 18)
+    bst.insert(newElement: 12)
+
+    bst.printValues()
+  }
   func testStringIfUnique() {
     let str: String = "abcdefgzqs"
     var checker: Int32 = 0
@@ -81,5 +99,17 @@ class DSAlgoTests: XCTestCase {
       checker = checker | newBit
       print(checker)
     }
+  }
+
+  func testSort() throws {
+    var arr = [1,22,4,5,66,7]
+    arr.sort()
+    print(arr)
+    let arr1 = [1,22,4,5,66,7,100,2]
+    let newArray = arr1.sorted()
+    print(newArray)
+
+    let strArry = "fasacde"
+    print(strArry.sorted())
   }
 }
