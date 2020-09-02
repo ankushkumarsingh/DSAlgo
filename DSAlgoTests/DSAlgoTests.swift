@@ -112,4 +112,46 @@ class DSAlgoTests: XCTestCase {
     let strArry = "fasacde"
     print(strArry.sorted())
   }
+
+  func testFibonachi() throws {
+    let sol = Solution()
+    XCTAssert(0 == sol.calculateFib(0))
+    XCTAssert(1 == sol.calculateFib(1))
+    XCTAssert(1 == sol.calculateFib(2))
+    XCTAssert(2 == sol.calculateFib(3))
+    XCTAssert(3 == sol.calculateFib(4))
+    XCTAssert(5 == sol.calculateFib(5))
+    XCTAssert(8 == sol.calculateFib(6))
+    XCTAssert(13 == sol.calculateFib(7))
+    XCTAssert(21 == sol.calculateFib(8))
+  }
+
+  func testHouseRobber() {
+    let sol = Solution()
+    XCTAssert(sol.rob([1,2,3,1]) == 4)
+    XCTAssert(sol.rob([2,7,9,3,1]) == 12)
+
+  }
+
+  func testStrings() {
+    let x: UnicodeScalar = "🚽"
+    let y: Character = "👨‍👩‍👧‍👧"
+    //    "是"
+    print(x)
+    print(y)
+    
+    let greeting = "Hello! 👨‍👩‍👧‍👧"
+    print("Length: \(greeting.count)")
+    
+    print("Unicode scalar value count: \(greeting.unicodeScalars.count)")
+    // Prints "Unicode scalar value count: 15"
+    
+    print("UTF-8 representation count: \(greeting.utf8.count)")
+    // Prints "UTF-8 representation count: 18"
+    
+    let usFlag: Character = "\u{1F1FA}\u{1F1F8}"
+    print(usFlag)
+    // Prints "🇺🇸"
+  }
+   
 }
