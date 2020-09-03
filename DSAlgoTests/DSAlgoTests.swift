@@ -111,6 +111,10 @@ class DSAlgoTests: XCTestCase {
 
     let strArry = "fasacde"
     print(strArry.sorted())
+
+    let sol = Solution()
+    let merged = sol.merge([1,3,5], [2,4])
+    XCTAssert(merged == [1,2,3,4,5])
   }
 
   func testFibonachi() throws {

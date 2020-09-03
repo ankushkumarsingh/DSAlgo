@@ -86,8 +86,47 @@ class Solution {
     let start = 0
     let end = nums.count - 1
     let middle = (start + end)/2
-//    let h
+    var helper = Array(repeating: 0, count: nums.count)
+    let first = mergeSort(nums, helper: &helper, start: start, end: middle)
+    let second = mergeSort(nums, helper: &helper, start: middle, end: end)
+    return merge(first, second)
+  }
 
+  func mergeSort(_ nums:[Int], helper: inout [Int], start: Int, end: Int) -> [Int] {
     return []
+  }
+
+  func merge(_ arr1: [Int], _ arr2: [Int]) -> [Int] {
+    if arr1.isEmpty {
+      return arr2
+    } else if arr2.isEmpty {
+      return arr1
+    }
+    let count1 = arr1.count
+    let count2 = arr2.count
+    var temp = [Int]()
+    var index1 = 0
+    var index2 = 0
+    while index1 < count1 && index2 < count2 {
+      if arr1[index1] <= arr2[index2] {
+        temp.append(arr1[index1])
+        index1 += 1
+      } else {
+        temp.append(arr2[index2])
+        index2 += 1
+      }
+    }
+    if index1 == count1 {
+      while index2 < count2 {
+        temp.append(arr2[index2])
+        index2 += 1
+      }
+    } else if index2 == count2 {
+      while index1 < count1 {
+        temp.append(arr1[index1])
+        index1 += 1
+      }
+    }
+    return temp
   }
 }
